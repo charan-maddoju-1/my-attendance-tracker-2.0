@@ -125,7 +125,7 @@ function getIntroStatusFromStorage(){
         return 0;
     }
 }
-
+let intro=1;
 let intro=getIntroStatusFromStorage();
 if(intro==1){
     mainPage.classList.add("d-none");
