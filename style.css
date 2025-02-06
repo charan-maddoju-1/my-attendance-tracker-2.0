@@ -3,6 +3,7 @@
     background-image: linear-gradient(180deg,#081f3e,#095261) ;
     background-size: cover;
     min-height:100vh;
+    width: 100vw;
 }
 
 .attendance-set-card-container{
