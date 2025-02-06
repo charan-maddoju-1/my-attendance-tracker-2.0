@@ -11,6 +11,7 @@ let goalText="Your Attendance Goal : ";
 
 setAttendanceBtn.onclick=function(){
     let attendanceGoalInputValue=attendanceGoalInputElement.value;
+    attendanceGoalInputElement.value="";
     let parsedattendanceGoal=parseInt(attendanceGoalInputValue);    
     if(attendanceGoalInputValue===""||attendanceGoalInputValue===" "){
         alert("Enter a valid input");
@@ -29,7 +30,8 @@ setAttendanceBtn.onclick=function(){
         overAllAttendanceContainer.onclick();
         localStorage.setItem("overAllAttendanceGoal",JSON.stringify(attendanceGoal));
         localStorage.setItem("subjectsList",JSON.stringify(subjectsList));
-        intro=0;
+        let intro=getIntroStatusFromStorage();
+        intro.status=0;
         localStorage.setItem("introStatus",JSON.stringify(intro));
     }
     
@@ -48,10 +50,25 @@ let overAllPercentageConatiner=document.getElementById("percentageContainer");
 
 let subjectsContainerRowElement=document.getElementById("subjectsContainer");
 
+
+
+
+function getIntroStatusFromStorage(){
+    let introFromStorage=localStorage.getItem("introStatus");
+    let parsedIntro=JSON.parse(introFromStorage);
+    if(parsedIntro===null){
+        return {status:1};
+    }
+    else{
+        return parsedIntro;
+    }
+}
+let intro=getIntroStatusFromStorage();
 backButton.onclick=function(){
     mainPage.classList.add("d-none");
     introPage.classList.remove("d-none");
-    intro=0;
+    intro=getIntroStatusFromStorage();
+    intro.status=1;
     localStorage.setItem("introStatus",JSON.stringify(intro));
 }
 // subject1={
@@ -115,19 +132,10 @@ function getOverAllPercentageFromStorage(){
     }
 }
 
-function getIntroStatusFromStorage(){
-    let introFromStorage=localStorage.getItem("introStatus");
-    let parsedIntro=parseInt(introFromStorage);
-    if(parsedIntro===null){
-        return 1;
-    }
-    else{
-        return 0;
-    }
-}
-let intro=1;
-let intro=getIntroStatusFromStorage();
-if(intro==1){
+
+
+
+if(intro.status==1){
     mainPage.classList.add("d-none");
     introPage.classList.remove("d-none");
 }
@@ -214,10 +222,9 @@ deleteAllButton.onclick=function(){
         localStorage.removeItem("subjectsList");
         localStorage.removeItem("myOverallAttendance");
         localStorage.removeItem("overAllAttendanceGoal");
+        localStorage.removeItem("introStatus");
         introPage.classList.remove("d-none");
         mainPage.classList.add("d-none");
-        intro=1;
-        localStorage.setItem("introStatus",JSON.stringify(intro));
     }
 }
 
