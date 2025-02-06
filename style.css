@@ -2,13 +2,20 @@
 .attendance-set-bg-container{
     background-image: linear-gradient(180deg,#081f3e,#095261) ;
     background-size: cover;
-    height:100vh;
+    min-height:100vh;
 }
 
 .attendance-set-card-container{
     width:100%;
     background-color:#deefd0 ;
     border-radius: 16px;
+}
+
+.intro-description-container{
+    color:#ffffff;
+    font-family:"Roboto";
+    font-weight: 400;
+    font-size: 12px;
 }
 
 .attendance-bg-container{
@@ -48,6 +55,13 @@
     font-weight:600;
     font-size: 34px;
     text-align:center;
+}
+
+.attendanceGoalText{
+    color:#e9c762;
+    font-family:"Roboto";
+    font-weight: 400;
+    font-size: 25px;
 }
 
 .subject-input-indicator{
@@ -157,17 +171,17 @@
     }
     
     .progress-tracker{
-        height:200px;
-        width: 200px;
+        height:250px;
+        width: 250px;
         position:relative;
         margin-left:auto;
         margin-right: auto;
     }
     .outer{
-        height:150px;
-        width: 150px;
+        height:200px;
+        width: 200px;
         border:5px solid #37f350;
-        border-radius:50%;
+        border-radius:100%;
     }
     .inner{
         height:100px;

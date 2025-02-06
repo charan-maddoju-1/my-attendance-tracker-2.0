@@ -18,11 +18,27 @@
         <div class="row">
             <div class="col-12">
                 <div class="attendance-set-bg-container pt-5 p-4">
-                    <div class="d-flex flex-row justify-content-center mb-5">
+                    <div class="d-flex flex-row justify-content-center mb-4">
                         <i class="fa-regular fa-pen-to-square fa-2x home-page-icon mr-2"></i>
                         <h1 class="main-heading">Attendance Tracker</h1>
                     </div>
-                    <div class="attendance-set-card-container m-auto pt-4 pb-3 d-flex flex-column align-items-center">
+                    <div class="intro-description-container mb-5">
+                        <h4 style="color:#e9c762"> Welcome to the Application !</h4>
+                        <p> Hi ! <br/>
+                        Here is you attendance tracker. By using this application you can make record of you attendance count and track the progress in reaching your attendance goal.
+                        </p>
+                        <h4> How it works ?</h4>
+                        <ul>
+                            <li>Set you attendance goal</li>
+                            <li>Add subjects</li>
+                            <li>On attending classes, increase both attended and total classes count by one for that specific subject </li>
+                            <li>On missing a class,increase only the total classes count for that specific subject</li>
+                            
+                        </ul>
+                        <p>On every action you perform this application will reflect the percentage of attendance you had in each subject individually and it indicates you in which subject you have lack of attendance.</br>Also it shows the overall attendance in percentage and indicates whether you have reached your attendance goal. </p>
+
+                    </div>
+                    <div class="attendance-set-card-container pt-4 pb-3 d-flex flex-column align-items-center">
                         <h1 class="set-heading" style="color:black"> SET ATTENDANCE GOAL</h1>
                         <div class="user-input-container mb-3">
                             <p class="subject-input-indicator mb-2" style="color:black">Attendance Goal</p>
@@ -36,7 +52,7 @@
         </div>
     </div>
     
-    <div class="attendance-bg-container" id="mainPage">
+    <div class="attendance-bg-container d-none" id="mainPage">
         <div class="container-fill">
             <div class="row">
                 <div class="col-12 col-md-5 col-lg-4">
@@ -45,6 +61,7 @@
                             <i class="fa-regular fa-pen-to-square fa-2x home-page-icon mr-2"></i>
                             <h1 class="main-heading">Attendance Tracker</h1>
                         </div>
+                        <p class="attendanceGoalText mb-3" id="goalText">Your Attendance Goal: </p>
                         <div class="user-input-container mb-3">
                             <p class="subject-input-indicator mb-2">Subject</p>
                             <input class="user-input" type="text" placeholder="Enter Subject name" id="subjectInputElement"/>
@@ -58,26 +75,29 @@
                             <div class="outer mb-3 d-flex justify-content-center align-items-center" id="percentageContainer">
                                 <p class="overall-attendence-percentage" id="overAllAttendance">0</p>
                             </div>
-                            <p class="overall-alert-message text-center" id="overAllAttendanceLabel">Manage your attendance to cross 75%.</p>
+                            <p class="overall-alert-message text-center" id="overAllAttendanceLabel">Attendance goal status will be reflected here.</p>
                         </div>
-                        <button class="btn btn-danger" id="deleteAllBtn">Delete All</button>
+                        <div class="d-flex justify-content-between">
+                            <button class="btn btn-danger" id="deleteAllBtn">Delete All</button>
+                            <button class="btn btn-primary" id="backBtn">Change attendance goal</button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-7 col-lg-8">
                         <div class="container">
                             <div class="row subjects-container pt-4 p-4" id="subjectsContainer">
-                               <div class="col-12 col-lg-6" id="subjectsContainer">
+                               <!-- <div class="col-12 col-lg-6" id="subjectsContainer">
                                      <div class="subject-wise-attendence-card p-3 mb-4">
                                         <div class="d-flex flex-row justify-content-center mb-3">
                                             <h2 class="subject-heading mr-auto">Telugu</h2>
-                                            <i class="fa-regular fa-trash-can  ml-auto" id="subjectDeleteIcon"></i>
+                                            <i class="fa-regular fa-trash-can  ml-auto"></i>
                                         </div>
                                         <div class="d-flex flex-row justify-content-between">
                                             <div class="classes-count-box ml-1">
                                                 <div class="d-flex flex-row justify-content-between attendence-changing-container">
-                                                    <button class="plus-minus-button" id="attendedMinusButton">-</button>
-                                                    <p class="attendence-text" id="attendedClassesCount">0</p>
-                                                    <button class="plus-minus-button" id="attendedPlusButton">+</button>
+                                                    <button class="plus-minus-button">-</button>
+                                                    <p class="attendence-text">58</p>
+                                                    <button class="plus-minus-button">+</button>
                                                 </div>
                                                 <p class="classes-count-label" style="color:#0a3fff">Attended classes</p>
                                             </div>
@@ -93,10 +113,10 @@
                                         </div>
                                         <div class="d-flex flex-row justify-content-between">
                                             <p class="subject-attendce-status-indicator ml-2">You have good attendance in this subject</p>
-                                            <div class="mr-2 d-flex justify-content-center align-items-center" style="width:40%"><p class="subject-attendence-percent" >90%</p></div>
+                                            <div class="mr-2 d-flex justify-content-center align-items-center" style="width:40%"><p class="subject-attendence-percent">90%</p></div>
                                         </div> 
                                         
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
