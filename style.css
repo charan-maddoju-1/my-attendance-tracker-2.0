@@ -207,8 +207,8 @@
     }
     .subjects-container{
         background-color:#ffffff;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
+        border-top-left-radius: 2.5%;
+        border-bottom-left-radius: 2.5%;
         height: 100vh;
         overflow-y: scroll;
         scrollbar-width: none;
