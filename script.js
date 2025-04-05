@@ -593,7 +593,7 @@ function subjectCardBottomSection(subjectCardElement,subject){
 function createAndAppendAttendanceCard(subject){
     
     let responsiveSubjectContainer=document.createElement("div");
-    responsiveSubjectContainer.classList.add("col-12","col-lg-6");
+    responsiveSubjectContainer.classList.add("col-12","col-lg-6,"col-xl-4");
     subjectsContainerRowElement.appendChild(responsiveSubjectContainer);
     let subjectContainerId="sub"+subject.uniqueId;
     responsiveSubjectContainer.id=subjectContainerId;
