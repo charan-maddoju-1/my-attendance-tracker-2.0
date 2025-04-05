@@ -515,22 +515,11 @@ function subjectCardBottomSection(subjectCardElement,subject){
     subjectCardBottomContainer.classList.add("d-flex", "flex-row", "justify-content-between");
     subjectCardElement.appendChild(subjectCardBottomContainer);
 
-    let subjectCardBottomSubContainer=document.createElement("div");
-    subjectCardBottomSubContainer.classList.add("d-flex", "flex-column", "justify-content-between");
-    subjectCardBottomContainer.appendChild(subjectCardBottomSubContainer);
-
     let subjectAttendanceStatusText=document.createElement("p");
     subjectAttendanceStatusText.classList.add("subject-attendce-status-indicator","ml-2");
     subjectAttendanceStatusText.id="attendanceStatus"+subject.uniqueId;
     subjectAttendanceStatusText.textContent="Attendance status will be reflected here";
-    subjectCardBottomSubContainer.appendChild(subjectAttendanceStatusText);
-
-    let updatedText=document.createElement("p");
-    updatedText.classList.add("last-updated-text","ml-2");
-    updatedText.id="update"+subject.uniqueId;
-    let updateDate=new Date(subject.updatedDate);
-    updatedText.textContent="Last updated on : "+updateDate.toLocaleString('en-IN');
-    subjectCardBottomSubContainer.appendChild(updatedText);
+    subjectCardBottomContainer.appendChild(subjectAttendanceStatusText);
 
     let subjectAttendancePercent=document.createElement("div");
     subjectAttendancePercent.classList.add("mr-2" ,"d-flex", "justify-content-center", "align-items-center","subject-attendence-percent");
@@ -558,7 +547,14 @@ function subjectCardBottomSection(subjectCardElement,subject){
     //         alert("Attended classes should be less than or equal to Total classes");
     //     }
     // }
+    let updatedText=document.createElement("p");
+    updatedText.classList.add("last-updated-text","ml-2");
+    updatedText.id="update"+subject.uniqueId;
+    let updateDate=new Date(subject.updatedDate);
+    updatedText.textContent="Last updated on : "+updateDate.toLocaleString('en-IN');
+    buttonsContainer.appendChild(updatedText);
 
+    
     let resetButton=document.createElement("button");
     resetButton.classList.add("btn","btn-warning","ml-auto");
     resetButton.textContent="Reset";
