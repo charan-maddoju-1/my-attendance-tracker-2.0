@@ -557,9 +557,12 @@ function subjectCardBottomSection(subjectCardElement,subject){
     
     let resetButton=document.createElement("button");
     resetButton.classList.add("btn","btn-warning","ml-auto");
+    resetButton.style.width="30%";
+    resetButton.style.height= "30px";
+    resetButton.style.fontSize="12px";
     resetButton.textContent="Reset";
     buttonsContainer.appendChild(resetButton);
-
+    
     resetButton.onclick=function(){   
         subjectAttendanceStatusText.textContent="Attendance status will be reflected here";
         subjectAttendanceStatusText.style.color="#058b1c";
