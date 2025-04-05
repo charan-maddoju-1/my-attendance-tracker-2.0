@@ -529,7 +529,7 @@ function subjectCardBottomSection(subjectCardElement,subject){
     updatedText.classList.add("last-updated-text","ml-2");
     updatedText.id="update"+subject.uniqueId;
     let updateDate=new Date(subject.updatedDate);
-    updatedText.textContent="Last upadted on : "+updateDate.toLocaleString('en-IN');
+    updatedText.textContent="Last updated on : "+updateDate.toLocaleString('en-IN');
     subjectCardBottomSubContainer.appendChild(updatedText);
 
     let subjectAttendancePercent=document.createElement("div");
