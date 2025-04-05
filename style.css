@@ -273,6 +273,12 @@
     height:40%;
 }
 
+.last-updated-text{
+    color:#232425;
+    font-weight:500;
+    font-size:12px;
+}
+
 .subject-attendence-percent{
     font-weight:600;
     font-size:30px; 
