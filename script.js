@@ -409,6 +409,12 @@ function totalClassesContainer(classesCountTopConatinerElement,subject){
     totalClassesCountInnerContainer.appendChild(totalPlusButton);
 
     totalPlusButton.onclick=function(){
+        subject.updatedDate=new Date();
+        let updatedText=document.getElementById("update"+subject.uniqueId);
+        let updateDate=new Date(subject.updatedDate);
+        updatedText.textContent="Last updated on : "+updateDate.toLocaleString('en-IN');
+
+        
         totalCount=parseInt(subject.totalCount);
         totalCount=totalCount+1;
         totalClassesCount.textContent=totalCount;
@@ -509,11 +515,22 @@ function subjectCardBottomSection(subjectCardElement,subject){
     subjectCardBottomContainer.classList.add("d-flex", "flex-row", "justify-content-between");
     subjectCardElement.appendChild(subjectCardBottomContainer);
 
+    let subjectCardBottomSubContainer=document.createElement("div");
+    subjectCardBottomSubContainer.classList.add("d-flex", "flex-column", "justify-content-between");
+    subjectCardBottomContainer.appendChild(subjectCardBottomSubContainer);
+
     let subjectAttendanceStatusText=document.createElement("p");
     subjectAttendanceStatusText.classList.add("subject-attendce-status-indicator","ml-2");
     subjectAttendanceStatusText.id="attendanceStatus"+subject.uniqueId;
     subjectAttendanceStatusText.textContent="Attendance status will be reflected here";
-    subjectCardBottomContainer.appendChild(subjectAttendanceStatusText);
+    subjectCardBottomSubContainer.appendChild(subjectAttendanceStatusText);
+
+    let updatedText=document.createElement("p");
+    updatedText.classList.add("last-updated-text","ml-2");
+    updatedText.id="update"+subject.uniqueId;
+    let updateDate=new Date(subject.updatedDate);
+    updatedText.textContent="Last upadted on : "+updateDate.toLocaleString('en-IN');
+    subjectCardBottomSubContainer.appendChild(updatedText);
 
     let subjectAttendancePercent=document.createElement("div");
     subjectAttendancePercent.classList.add("mr-2" ,"d-flex", "justify-content-center", "align-items-center","subject-attendence-percent");
@@ -615,7 +632,8 @@ addButtonElement.onclick=function(){
             uniqueId:subjectsList.length+1,
             attendedCount:0,
             totalCount:0,
-            subPercent:0
+            subPercent:0,
+            updatedDate: new Date()
         }
         subjectsList.push(subject);
         createAndAppendAttendanceCard(subject);
