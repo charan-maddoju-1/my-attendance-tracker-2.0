@@ -548,7 +548,7 @@ function subjectCardBottomSection(subjectCardElement,subject){
     //     }
     // }
     let updatedText=document.createElement("p");
-    updatedText.classList.add("last-updated-text","ml-2");
+    updatedText.classList.add("last-updated-text");
     updatedText.id="update"+subject.uniqueId;
     let updateDate=new Date(subject.updatedDate);
     updatedText.textContent="Last updated on : "+updateDate.toLocaleString('en-IN');
