@@ -3,6 +3,290 @@
     background-image: linear-gradient(180deg,#081f3e,#095261) ;
     background-size: cover;
     min-height:100vh;
+}
+
+.attendance-set-card-container{
+    width:100%;
+    background-color:#deefd0 ;
+    border-radius: 16px;
+}
+
+.intro-description-container{
+    color:#ffffff;
+    font-family:"Roboto";
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.attendance-bg-container{
+    background-image: linear-gradient(180deg,#081f3e,#095261) ;
+    background-size: cover;
+}
+.set-heading{
+    color:black;
+    font-family:"Roboto";
+    font-weight:600;
+    font-size: 25px;
+    text-align:center;
+}
+.set-button{
+    background-color:#60FFFF;
+    width:114px;
+    height:42px;
+    border-radius:10px;
+    border: 0;
+    font-weight: 500;
+}
+
+
+
+.home-page{
+    min-height:100vh;
+    max-height:900px;
+}
+
+.home-page-icon{
+    color:#ffffff;
+}
+
+.main-heading{
+    color:#ffffff;
+    font-family:"Roboto";
+    font-weight:600;
+    font-size: 34px;
+    text-align:center;
+}
+
+.attendanceGoalText{
+    color:#e9c762;
+    font-family:"Roboto";
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.subject-input-indicator{
+    color:#ffffff;
+    font-family:"Roboto";
+    font-weight: 400;
+    font-size: 20px;
+}   
+
+.user-input{
+    height:42px;
+    width:100%;
+    border: 0;
+    border-radius:8px;
+}
+.add-button{
+    background-color:#60FFFF;
+    width:114px;
+    height:42px;
+    border-radius:10px;
+    border: 0;
+    font-weight: 500;
+}
+
+.progress-tracker{
+    height:300px;
+    width: 300px;
+    position:relative;
+    margin-left:auto;
+    margin-right: auto;
+}
+.outer{
+    height:200px;
+    width: 200px;
+    border:5px solid #37f350;
+    border-radius: 50%;
+}
+.inner{
+    height:150px;
+    width:150px;
+    border:5px solid #37f350;
+    border-radius: 50%;
+    margin:20px;
+}
+
+.overall-attendence-percentage{
+    color:#ffffff;
+    font-size:40px;
+    font-weight:700;
+
+}
+
+.overall-alert-message{
+    color:#37f350;
+    font-family:"Roboto";
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.subjects-container{
+    max-height: 100vh;
+    min-height:100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+}
+
+@media(min-width:768px){
+    .home-page{
+        height:100vh;
+        overflow-y:scroll;
+        scrollbar-width: none;
+    }
+    
+    .home-page-icon{
+        color:#ffffff;
+    }
+    
+    .main-heading{
+        color:#ffffff;
+        font-family:"Roboto";
+        font-weight:600;
+        font-size: 30px;
+        text-align:center;
+    }
+    
+    .subject-input-indicator{
+        color:#ffffff;
+        font-family:"Roboto";
+        font-weight: 400;
+        font-size: 18px;
+    }   
+    
+    .user-input{
+        height:42px;
+        width:100%;
+        border: 0;
+        border-radius:8px;
+    }
+    .add-button{
+        background-color:#60FFFF;
+        width:114px;
+        height:42px;
+        border-radius:10px;
+        border: 0;
+        font-weight: 500;
+    }
+    
+    .progress-tracker{
+        height:250px;
+        width: 250px;
+        position:relative;
+        margin-left:auto;
+        margin-right: auto;
+    }
+    .outer{
+        height:200px;
+        width: 200px;
+        border:5px solid #37f350;
+        border-radius:100%;
+    }
+    .inner{
+        height:100px;
+        width:100px;
+        border:5px solid #37f350;
+        border-radius: 50%;
+        margin:20px;
+    }
+    
+    .overall-attendence-percentage{
+        color:#ffffff;
+        font-size:30px;
+        font-weight:700;
+    
+    }
+    
+    .overall-alert-message{
+        color:#37f350;
+        font-family:"Roboto";
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .subjects-container{
+        background-color:#ffffff;
+        border-top-left-radius: 2.5%;
+        border-bottom-left-radius: 2.5%;
+        height: 100vh;
+        overflow-y: scroll;
+        scrollbar-width: none;
+    
+    }
+}
+
+.subject-wise-attendence-card{
+    width:100%;
+    background-color:#deefd0 ;
+    border-radius: 16px;
+}
+
+.subject-heading{
+    font-family:"Roboto";
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.classes-count-box{
+    width:40%;
+}
+.attendence-changing-container{
+    height:50px;
+    width:100%;
+    background-color:#095261;
+    border-radius:25px;
+}
+
+.plus-minus-button{
+    height: 30px;
+    width: 30px;
+    border:0;
+    font-weight:bold;
+    font-size:20px;
+    border-radius: 15px;
+    margin:auto;
+}
+
+.attendance-text{
+    color:#ffffff;
+    font-family:"Roboto";
+    font-size:20px;
+    font-weight:500;
+    margin:auto;
+}
+
+.classes-count-label{
+    font-size:16px;
+    font-weight:500;
+    font-family:"Roboto";
+    text-align:center;
+    margin-top:5px;
+}
+
+.subject-attendce-status-indicator{
+    color:#058b1c;
+    font-weight:500;
+    font-size:16px;
+    font-family:"Roboto";
+    width:60%;
+    height:40%;
+}
+
+.last-updated-text{
+    color:#232425;
+    font-weight:500;
+    font-size:12px;
+    width:60%;
+}
+.subject-attendence-percent{
+    font-weight:600;
+    font-size:30px; 
+}
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+.attendance-set-bg-container{
+    background-image: linear-gradient(180deg,#081f3e,#095261) ;
+    background-size: cover;
+    min-height:100vh;
     width: 100vw;
 }
 

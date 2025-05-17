@@ -17,6 +17,7 @@ setAttendanceBtn.onclick=function(){
         alert("Enter a valid input");
     }
     else{
+        subjectInputElement.focus();
         let attendanceGoal={
             goal:parsedattendanceGoal
         }
@@ -414,7 +415,8 @@ function totalClassesContainer(classesCountTopConatinerElement,subject){
         let updateDate=new Date(subject.updatedDate);
         updatedText.textContent="Last updated on : "+updateDate.toLocaleString('en-IN');
 
-        
+
+
         totalCount=parseInt(subject.totalCount);
         totalCount=totalCount+1;
         totalClassesCount.textContent=totalCount;
@@ -437,7 +439,8 @@ function totalClassesContainer(classesCountTopConatinerElement,subject){
                 else{
                     subjectAttendanceStatusText.textContent="You have good attendance in this subject.Keep going."
                     subjectAttendanceStatusText.style.color="#058b1c";
-                }
+                }  
+                
             }
         }
         else{
@@ -521,6 +524,14 @@ function subjectCardBottomSection(subjectCardElement,subject){
     subjectAttendanceStatusText.textContent="Attendance status will be reflected here";
     subjectCardBottomContainer.appendChild(subjectAttendanceStatusText);
 
+    // let updatedText=document.createElement("p");
+    // updatedText.classList.add("last-updated-text","ml-2");
+    // updatedText.id="update"+subject.uniqueId;
+    // let updateDate=new Date(subject.updatedDate);
+    // updatedText.textContent="Last updated on : "+updateDate.toLocaleString('en-IN');
+    // subjectCardBottomSubContainer.appendChild(updatedText);
+
+
     let subjectAttendancePercent=document.createElement("div");
     subjectAttendancePercent.classList.add("mr-2" ,"d-flex", "justify-content-center", "align-items-center","subject-attendence-percent");
     subjectAttendancePercent.style.width="40%";
@@ -554,15 +565,15 @@ function subjectCardBottomSection(subjectCardElement,subject){
     updatedText.textContent="Last updated on : "+updateDate.toLocaleString('en-IN');
     buttonsContainer.appendChild(updatedText);
 
-    
     let resetButton=document.createElement("button");
     resetButton.classList.add("btn","btn-warning","ml-auto");
     resetButton.style.width="30%";
     resetButton.style.height= "30px";
     resetButton.style.fontSize="12px";
+
     resetButton.textContent="Reset";
     buttonsContainer.appendChild(resetButton);
-    
+
     resetButton.onclick=function(){   
         subjectAttendanceStatusText.textContent="Attendance status will be reflected here";
         subjectAttendanceStatusText.style.color="#058b1c";
@@ -625,6 +636,7 @@ addButtonElement.onclick=function(){
         let attendance=localStorage.getItem("overAllAttendanceGoal");
         let parsedAttendance=JSON.parse(attendance);
         // console.log(parsedAttendance.goal)
+        
         let subject={
             name:subjectName,
             attendanceGoal:parsedAttendance.goal,
