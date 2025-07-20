@@ -20,7 +20,7 @@ This is an interactive web application that manages the attendance of students. 
 
 - **HTML5** – Structure  
 - **CSS3** – Styling and layout  
-- **JavaScript (Vanilla)** – Logic and interactivity  
+- **JavaScript** – Logic and interactivity  
 - **localStorage** – Persistent client-side data storage  
 
 ---
